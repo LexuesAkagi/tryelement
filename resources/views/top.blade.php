@@ -9,7 +9,7 @@
     </header>
     
     <div class="text-center">
-        <a href="#" class="btn btn-success btn-lg mt-10" href="#about">ゲームを始める</a>
+        <a href="{{ route('game.start') }}" class="btn btn-success btn-lg mt-10">ゲームを始める</a>
     </div>
     
     <div class="grid grid-cols-2 gap-2">

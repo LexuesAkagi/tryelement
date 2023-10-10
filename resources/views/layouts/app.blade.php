@@ -15,4 +15,29 @@
 
             @yield('content')
     </body>
+    <script>
+        let selectedCardId; // 選択されたカードのIDを保持する変数
+    
+        function selectCard(cardId) {
+            selectedCardId = cardId; // カードが選択された際にIDを設定
+            modal.classList.remove("hidden"); // モーダルを表示
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            const confirmButton = document.getElementById("modal-confirm");
+            const cancelButton = document.getElementById("modal-cancel");
+    
+            confirmButton.addEventListener("click", function () {
+                // はいボタンがクリックされたときの処理をここに追加
+                modal.classList.add("hidden");
+                // 選択されたカードID（selectedCardId）をサーバーに送信して処理を進めるか、必要ならばカード情報を更新するなどの処理を実行
+            });
+    
+            cancelButton.addEventListener("click", function () {
+                // キャンセルボタンがクリックされたときの処理をここに追加
+                modal.classList.add("hidden");
+            });
+        });
+    </script>
+
 </html>
